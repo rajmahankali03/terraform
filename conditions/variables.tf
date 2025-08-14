@@ -43,3 +43,8 @@ variable "sg_tags" {
         Name = "allow-all"
     }
 }
+
+variable "environment" {
+    default = "dev"
+    
+}

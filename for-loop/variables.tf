@@ -11,7 +11,7 @@ variable "instance_type" {
 variable "ec2_tags" {
     type = map(string)
     default = {
-        Name = "HelloWorld"
+        Name = "Roboshop"
         Purpose = "variables-demo"
     }
 }
@@ -42,4 +42,20 @@ variable "sg_tags" {
     default = {
         Name = "allow-all"
     }
+}
+
+variable "instances" {
+    default = {
+        "mongodb" = "t3.micro" # each keyword is assigned for eery iteration, u will get each.key and each.value
+        "redis" = "t3.micro"
+    }
+}
+
+variable "zone_id"{
+    default = "Z03916483D3PVQW3A089G"
+}
+
+
+variable "domain_name"{
+    default = "devopsmahankali.shop "
 }
